@@ -1,0 +1,320 @@
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #494C4E;
+  --current-color: #82ade2;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+header nav a,
+.logo,
+.current-color {
+  transition: all 0.5s ease-in-out;
+}
+
+
+body {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  color: var(--main-color);
+  background-color: #ffffff;
+  border: 10px solid var(--current-color);
+  min-height: 100vh;
+}
+
+
+.current-color {
+  color: var(--current-color);
+}
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   padding: 30px 10%;
+   position: relative;
+   flex-wrap: wrap;
+}
+
+
+/* Header */
+
+header,
+.about {
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about .hidden-section {
+  font-size: 0.7em;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4em;
+  font-weight: 100;
+  height: 0;
+  opacity: 0;
+  overflow:hidden;
+  transition: all 0.5s linear;
+}
+
+.hidden-section img {
+  width: 150px;
+  border-radius: 100%;
+  float: left;
+  margin-right: 30px;
+  opacity: 0.7;
+}
+
+.about-link {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+.hidden-section img {
+  width: 70%;
+  margin: 30px auto;
+  float: none;
+}
+
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header ul li {
+  margin:  0 15px;
+}
+
+header nav a,
+header nav a:visited {
+  font-family: 'Vollkorn', serif;
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+header nav a:hover {
+  color: var(--current-color);
+}
+
+.hidden-name {
+  display: none;
+}
+
+
+
+.logo {
+  padding: 10px 10px;
+  transform: rotate(90deg);
+  text-align: center;
+}
+
+.logo a {
+  font-size: 1.5em;
+  letter-spacing: -4px;
+  font-weight: 300;
+}
+
+.logo:hover {
+  transform: rotate(70deg);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .logo {
+      margin: 30px auto;
+      width: 100%;
+    }
+
+    .logo a {
+      font-size: 2em;
+    }
+
+    header ul li {
+      margin:  0 5px;
+    }
+
+    header nav {
+      width: 100%;
+    }
+
+    header nav li {
+      width: 50%;
+    text-align: center;
+    margin: 5px 0;
+    }
+
+}
+
+/* About */
+
+.about,
+.email {
+  font-weight: 700;
+  font-family: 'Vollkorn', serif;
+  font-size: 1.7em;
+  line-height: 1.5em;
+}
+
+#more,
+.arrow,
+.cd-btn {
+  cursor: pointer;
+}
+
+
+.about div {
+  margin: 0 auto;
+}
+
+/* Portfolio */
+
+.description {
+  background-color: #fafafa;
+  padding: 50px;
+  font-size: 1.2em;
+  position: relative;
+  transform: translateY(-400px);
+  z-index: -1;
+  height: 0;
+  opacity: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  transition: all 1s ease-in-out;
+}
+
+
+.description p {
+  margin: 20px 0;
+  font-family: 'Vollkorn', serif;
+  line-height: 1.5em;
+}
+
+.description h1 {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.description video {
+  width: 100%;
+}
+
+.description img {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.lemon h2,
+.lemon p {
+  color: black;
+}
+
+.preview-btn {
+  display: inline-block;
+  padding: 1em;
+  border: 2px solid var(--current-color);
+  color: var(--current-color);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 300px;
+  text-align: center;
+  margin: 50px auto;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .preview-btn {
+      width: 70%;
+      font-size: 1em;
+    }
+}
+
+.preview-btn:hover {
+  background-color: var(--main-color);
+  color: white;
+  border: 2px solid white;
+}
+
+.ohdog-logo {
+  width: 30% !important;
+  margin-top: 50px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .ohdog-logo {
+    width: 70% !important;
+  }
+
+  .description img {
+    width: 90%;
+  }
+}
+
+
+/* Contact form */
+
+.contact {
+  background-color: var(--current-color);
+  display: none;
+}
+
+.contact form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact textarea {
+  width: 80%;
+
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px solid white;
+}
+
+.contact button {
+  border: white;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 300px;
+  text-align: center;
+  margin: 50px auto;
+  display: block;
+}
+
+.email {
+  text-align: center;
+  transform: translateY(-40px);
+  position: relative;
+  z-index: 9999999999999;
+}
+
+.email span {
+  display:inline;
+  border-bottom: 1px dotted var(--current-color);
+
+}
+
+.email a {
+  color: var(--main-color);
+  border-bottom: 1px dotted var(--current-color);
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
